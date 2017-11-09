@@ -1,0 +1,12 @@
+# R-Script
+
+# Upload the Amelia package
+library(Amelia)
+
+# read file
+my.data<-read.csv("mydata.csv", stringsAsFactors = False)
+
+#Visual map of columns and missing information
+#the color "red" will be the missing and the color "yellow" will observed
+#if you factorize a column with missing values it will not show up on the map as missing
+missmap(my.data, col = c("red","yellow"))
